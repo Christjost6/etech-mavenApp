@@ -16,7 +16,7 @@
 
 	<name>MavenEnterpriseApplication</name>
 	<url>http://etecconsultingllc.com.com</url>
-
+	
 	<description>Maven Enterprise Project</description>
 
 	<organization>
@@ -91,7 +91,7 @@
 		</dependency>
 
 	</dependencies>
-
+	
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
@@ -104,7 +104,7 @@
 	      <url>http://ec2-54-189-92-81.us-west-2.compute.amazonaws.com:8081/repository/maven-nexus-repo/</url>
 	    </snapshotRepository>
 	</distributionManagement>
-
+	
 
 	<build>
 		<finalName>MavenEnterpriseApplication</finalName>
@@ -129,32 +129,15 @@
                      <artifactId>nexus-artifact-uploader</artifactId>
                      <version>2.13</version>
                  </plugin>
-
+			<plugin>
+                    <groupId>sp.sd</groupId>
+                    <artifactId>nexus-artifact-uploader</artifactId>
+                    <version>2.13</version>
+                </plugin>
+			
+		
 		</plugins>
 	</build>
 
-
-</project>
-
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.mt</groupId>
-  <artifactId>maven-enterprise-application</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0</version>
-  <name> Maven Enterprise Application</name>
-  <url>http://maven.apache.org</url>
-  <modules>
-    <module>MavenEnterpriseApp-ear</module>
-    <module>MavenEnterpriseApp-web</module>
-  </modules>
-
-  <properties>
-	<!-- versions -->
-	<sonar.host.url>http://localhost:9000/</sonar.host.url>
-	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-</properties>
 
 </project>
